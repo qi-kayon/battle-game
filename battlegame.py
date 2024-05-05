@@ -25,57 +25,60 @@ dmg_bonus = 1
 
 round = 0
 
+
 while True:
     print("1) Wizard\n2) Elf\n3) Human")
-    character = input("Choose your character: ")
+    character = input("Choose your character: ").lower().strip()
 
     print("1) Sword\n2) Wand\n3) Bow")
-    weapon = input("Choose your weapon: ")
+    weapon = input("Choose your weapon: ").lower().strip()
 
-    if character == "1" or character == "Wizard":
+    #Assigning Character Attributes
+
+    if character == "1" or character == "wizard":
         character = "Wizard"
         my_hp = wizard_hp
         my_dmg = wizard_dmg
-        if weapon == "2" or weapon == "Wand":
+        if weapon == "2" or weapon == "wand":
             dmg_bonus = match__dmg
             weapon = "Wand"
-        elif weapon == "1" or weapon == "Sword":
-            dmg_bonus == mismatch_dmg
+        elif weapon == "1" or weapon == "sword":
+            dmg_bonus = mismatch_dmg
             weapon = "Sword"
-        elif weapon == "3" or weapon == "Bow":
-            dmg_bonus == nomatch_dmg
+        elif weapon == "3" or weapon == "bow":
+            dmg_bonus = nomatch_dmg
             weapon = "Bow"
         else:
             weapon = "Unknown Weapon"
         break
-    elif character == "2" or character == "Elf":
+    elif character == "2" or character == "elf":
         character = "Elf"
         my_hp = elf_hp
         my_dmg = elf_dmg
-        if weapon == "3" or weapon == "Bow":
+        if weapon == "3" or weapon == "bow":
             dmg_bonus = match__dmg
             weapon = "Bow"
-        elif weapon == "1" or weapon == "Sword":
-            dmg_bonus == mismatch_dmg
+        elif weapon == "1" or weapon == "sword":
+            dmg_bonus = mismatch_dmg
             weapon = "Sword"
-        elif weapon == "2" or weapon == "Wand":
-            dmg_bonus == nomatch_dmg
+        elif weapon == "2" or weapon == "wand":
+            dmg_bonus = nomatch_dmg
             weapon = "Wand"
         else:
             weapon = "Unknown Weapon"
         break
-    elif character == "3" or character == "Human":
+    elif character == "3" or character == "human":
         character = "Human"
         my_hp = human_hp
         my_dmg = human_dmg
-        if weapon == "1" or weapon == "Sword":
+        if weapon == "1" or weapon == "sword":
             dmg_bonus = match__dmg
             weapon = "Sword"
-        elif weapon == "2" or weapon == "Wand":
-            dmg_bonus == mismatch_dmg
+        elif weapon == "2" or weapon == "wand":
+            dmg_bonus = mismatch_dmg
             weapon = "Wand"
-        elif weapon == "3" or weapon == "Bow":
-            dmg_bonus == nomatch_dmg
+        elif weapon == "3" or weapon == "bow":
+            dmg_bonus = nomatch_dmg
             weapon = "Bow"
         else:
             weapon = "Unknown Weapon"
@@ -108,6 +111,9 @@ while True:
         if my_hp <= 0:
             print(f"The {character} has been defeated...\n")
             break
+
+
+
 
 
 """
